@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-const string DIR="/home/justin/ip-info";
+const string DIR="/home/pi/ip-info";
 
 int main()
 {
@@ -13,25 +13,26 @@ int main()
   if (shellOutput.is_open() == false) {cout << "Could not open file in: "
           << "''" << DIR << "''" << endl; return 1; }
 
-  string eachLine, targetString = "";
-  string targetLine = "192";   
+  string returnedLine, targetString = "";
+  string IP = "192";   
 
-  while (getline(shellOutput, eachLine))
+  while (getline(shellOutput, returnedLine))
   {
-//        cout << "I/O: " << eachLine << "" << endl;
+//      cout << "I/O: " << returnedLine << "" << endl;
 
-          int found = eachLine.find(targetLine);
+          int found = returnedLine.find(IP);
 
+//    If it's found
       if(found != std::string::npos)
       {
-         targetString = eachLine;
-      }
+         targetString = returnedLine;
+      }    
   }
 
 //  cout << "\nRetrieved: " << targetString << endl;
 
  //After finding correct single string
- string exportString = targetString;
+ string IP_ADDR = targetString;
 
  // Min Range
  int pos1 = targetString.find("t") + 1;
@@ -39,8 +40,8 @@ int main()
  // Max Range 
  int pos2 = targetString.find("b") - 8;
 
- exportString = targetString.substr(pos1,pos2);
- cout << "IP: " << exportString << endl;
+ IP_ADDR = targetString.substr(pos1,pos2);
+ cout << "\nIP: " << IP_ADDR << endl;
 
  return 0;
 }
