@@ -18,7 +18,7 @@ int main()
 
   while (getline(shellOutput, returnedLine))
   {
-//    cout << "I/O: " << returnedLine << "" << endl;
+//    out << "I/O: " << returnedLine << "" << endl;
       int found = returnedLine.find(IP);
 
 //    If it's found
@@ -31,8 +31,7 @@ int main()
 
 // cout << "\nRetrieved: " << targetString << endl;
 
- //After finding correct single string
- string IP_ADDR = targetString;
+ if(targetString == "") {cout << "Couldn't find IP. Are you online?"; return 1; }
 
  // Min Range
  int pos1 = targetString.find("t") + 1;
@@ -40,7 +39,7 @@ int main()
  // Max Range 
  int pos2 = targetString.find("b") - 8;
 
- IP_ADDR = targetString.substr(pos1,pos2);
+ string IP_ADDR = targetString.substr(pos1,pos2);
  cout << "IP: " << IP_ADDR << endl;
 
  return 0;
