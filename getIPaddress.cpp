@@ -40,7 +40,7 @@ int main()
  int pos2 = targetString.find("b") - 8;
 
  IP_ADDR = targetString.substr(pos1,pos2);
- cout << "\nIP: " << IP_ADDR << endl;
+ cout << "IP: " << IP_ADDR << endl;
 
  return 0;
 }
