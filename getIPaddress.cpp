@@ -25,6 +25,7 @@ int main()
       if(found != std::string::npos)
       {
          targetString = returnedLine;
+         break;
       }    
   }
 
