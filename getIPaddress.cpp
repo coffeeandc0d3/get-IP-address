@@ -3,11 +3,17 @@
 #include <string>
 using namespace std;
 
-const string DIR="/home/pi/ip-info";
+static string DIR="";
 const string IP = "192";   
 
-int main()
+// Pass in retreived value for echo /home/$USER into here for DIR to be right
+int main(int argc, char *argv[])
 {
+  if (argc != 2) {cout << "Couldn't determine $USER pathname."; return 1;}
+  
+  DIR = argv[1];
+  DIR.append("/ip-info");
+    
   ifstream shellOutput;
   shellOutput.open(DIR);
 
