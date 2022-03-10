@@ -20,7 +20,7 @@ int main()
   {
 //      cout << "I/O: " << returnedLine << "" << endl;
 
-          int found = returnedLine.find(IP);
+      int found = returnedLine.find(IP);
 
 //    If it's found
       if(found != std::string::npos)
