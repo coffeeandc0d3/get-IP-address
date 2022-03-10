@@ -24,8 +24,8 @@ int main()
 
       if(found != std::string::npos)
       {
-                targetString = eachLine;
-          }
+         targetString = eachLine;
+      }
   }
 
 //  cout << "\nRetrieved: " << targetString << endl;
