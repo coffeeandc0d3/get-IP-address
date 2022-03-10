@@ -18,8 +18,7 @@ int main()
 
   while (getline(shellOutput, returnedLine))
   {
-//      cout << "I/O: " << returnedLine << "" << endl;
-
+//    cout << "I/O: " << returnedLine << "" << endl;
       int found = returnedLine.find(IP);
 
 //    If it's found
@@ -29,7 +28,7 @@ int main()
       }    
   }
 
-//  cout << "\nRetrieved: " << targetString << endl;
+// cout << "\nRetrieved: " << targetString << endl;
 
  //After finding correct single string
  string IP_ADDR = targetString;
