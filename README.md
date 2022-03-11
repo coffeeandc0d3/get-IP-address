@@ -1,5 +1,5 @@
 # get-IP-address
-simple c program to output IP
+simple c program to output IP address
 
 # [Installation]
 
