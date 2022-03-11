@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
       if(found != std::string::npos)
       {
          targetString = returnedLine;
+         break;
       }    
   }
 
