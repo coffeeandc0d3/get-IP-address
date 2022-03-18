@@ -17,7 +17,7 @@ userPath=`echo /home/$USER`
 
 ./build/get-IP-address/getIPaddress $userPath 
 
-# program will grab the first line only and parse string for just the ip
-# will then output to screen in program
+# Cleanup:
+rm /home/$USER/ip-info
 
 
