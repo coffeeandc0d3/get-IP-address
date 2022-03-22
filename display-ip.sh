@@ -1,10 +1,8 @@
 #!/bin/bash
 
-cd /home/$USER/build/get-IP-address
-
 g++ -o getIPaddress getIPaddress.cpp
 
-touch /home/$USER/ip-info
+touch ip-info
 cd /home/$USER/
 
 ip addr | grep inet > ip-info
@@ -14,10 +12,6 @@ ip addr | grep inet > ip-info
 userPath=`echo /home/$USER`
 
 # call c++ program here:
+pwd
 
-./build/get-IP-address/getIPaddress $userPath 
-
-# Cleanup:
-rm /home/$USER/ip-info
-
-
+./build/get-ip-address/getIPaddress $userPath 
