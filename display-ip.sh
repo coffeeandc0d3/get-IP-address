@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /home/$USER/build/get-ip-address
+
 g++ -o getIPaddress getIPaddress.cpp
 
 touch ip-info
